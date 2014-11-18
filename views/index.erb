@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Facebark</title>
+</head>
+<body>
+
+<h1>Dogs</h1>
+
+<% @dogs.each do |dog| %>
+  <h3><%= dog[:name] %></h3>
+
+  <a href="/dogs/<%= dog[:name] %>">
+    <img height="100" src="<%= dog[:avatar_url] %>">
+  </a>
+<% end %>
+
+</body>
+</html>
